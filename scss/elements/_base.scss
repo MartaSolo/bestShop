@@ -3,12 +3,25 @@
 }
 
 body {
-  font-family: $fontPrimary;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
   width: 100%;
   max-width: 1352px;
   margin: 0 auto;
-  padding: 0 1rem;
+  @include notebook {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.header__logo {
+  color: $colorAccent;
+  font-family: $fontSecondary;
+  font-size: 2rem;
 }

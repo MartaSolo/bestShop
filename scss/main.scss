@@ -1,5 +1,9 @@
+//Generic
 @import "generic/reset";
+
+// Settings
 @import "settings/variables";
+@import "settings/mixins";
 
 // Elements
 @import "elements/base";
