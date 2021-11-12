@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --color-primary-shadow: rgba(7, 172, 230, 0.16);
+  --color-redish: rgba(251, 59, 100, 1);
+  --color-green: rgba(85, 223, 180, 1);
+  --color-grey: rgba(165, 165, 165, 1);
+  --color-light-grey: rgba(232, 233, 237, 1);
+  --color-consent: rgba(112, 112, 112, 1);
+  --color-input: rgba(149, 152, 154, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1352px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  border: 1px solid blue;
+  height: 70px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+.header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .header__logo {
+  text-decoration: none;
+  color: #08a6e4;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+}
+.header .container .header__nav {
+  border: 1px solid green;
+  height: 100%;
+}
+.header .container .header__nav .menu {
+  height: 100%;
+  display: flex;
+}
+.header .container .header__nav .menu .menu__item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #a5a5a5;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  padding: 0 2.5rem;
+}
+.header .container .header__nav .menu .menu__item:hover {
+  color: black;
+  border-bottom: 4px solid #08a6e4;
+}
+/*# sourceMappingURL=main.css.map */
