@@ -25,3 +25,25 @@ a {
   font-family: $fontSecondary;
   font-size: 2rem;
 }
+
+// General section styling
+
+.section {
+  padding: 100px 0;
+  .section__title {
+    font-family: $fontSecondary;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .section__row {
+    // display: flex;
+    // justify-content: space-around;
+    .section__column {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+    }
+  }
+}

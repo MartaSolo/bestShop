@@ -136,10 +136,76 @@ table {
 :root {
   --color-redish: rgba(251, 59, 100, 1);
   --color-green: rgba(85, 223, 180, 1);
-  --color-grey: rgba(165, 165, 165, 1);
   --color-light-grey: rgba(232, 233, 237, 1);
   --color-consent: rgba(112, 112, 112, 1);
   --color-input: rgba(149, 152, 154, 1);
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.row {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0.5rem;
+}
+.row [class*=col-] {
+  min-height: 1px;
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 792px) {
+  .row [class*=col-] {
+    flex-basis: 100%;
+  }
 }
 
 * {
@@ -172,6 +238,16 @@ a {
   font-size: 2rem;
 }
 
+.section {
+  padding: 100px 0;
+}
+.section .section__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
 .header {
   border: 2px solid green;
   height: 70px;
@@ -244,5 +320,56 @@ a {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.stat__column {
+  padding: 25px 0;
+}
+.stat__column .stat__icon {
+  position: relative;
+}
+.stat__column .stat__icon .stat__bg {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  position: relative;
+}
+.stat__column .stat__icon .stat__bg.left {
+  background-color: #fb3b64;
+}
+.stat__column .stat__icon .stat__bg.middle {
+  background-color: #08a6e4;
+}
+.stat__column .stat__icon .stat__bg.right {
+  background-color: #55dfb4;
+}
+.stat__column .stat__icon .stat__svg {
+  position: absolute;
+}
+.stat__column .stat__icon .stat__svg.left {
+  top: 8%;
+  left: 50%;
+}
+.stat__column .stat__icon .stat__svg.middle {
+  top: 23%;
+  left: 29%;
+}
+.stat__column .stat__icon .stat__svg.right {
+  top: 10%;
+  left: 48%;
+}
+.stat__column .stat__number {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+.stat__column .stat__text {
+  width: 130px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: #a5a5a5;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -31,20 +31,20 @@
 // }
 
 // Flex mixins
-@mixin flexCC {
+@mixin flexRCC {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin flexColSB {
+@mixin flexColSBC {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-@mixin flexColSA {
+@mixin flexColSAC {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

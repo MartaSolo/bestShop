@@ -4,11 +4,11 @@
   border: 2px solid blue;
   .container {
     height: 100%;
-    @include flexColSB;
+    @include flexColSBC;
     border: 2px solid orange;
     .hero__intro {
       flex-grow: 1;
-      @include flexColSA;
+      @include flexColSAC;
       border: 2px solid violet;
       .hero__title {
         font-family: $fontSecondary;
@@ -25,7 +25,7 @@
         padding: 1rem 2rem;
       }
       .hero__link {
-        @include flexCC;
+        @include flexRCC;
         width: 440px;
         padding: 1.3rem;
         background-color: $colorAccent;
