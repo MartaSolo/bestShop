@@ -2,46 +2,57 @@
 .hero {
   height: calc(100vh - 70px);
   border: 2px solid blue;
-  @include flexColSB;
   .container {
-    border: 2px solid orange;
+    height: 100%;
     @include flexColSB;
-  }
-  &__title {
-    font-family: $fontSecondary;
-    font-size: 3rem;
-    // margin-bottom: 20px;
-    padding: 1.5rem 0;
-  }
-  &__text {
-    font-size: 1rem;
-    margin-bottom: 38px;
-    text-align: center;
-  }
-  &__link {
-    @include flexCC;
-    width: 440px;
-    height: 67px;
-    background-color: $colorAccent;
-    box-shadow: 5px 10px 14px $colorAccentShadow;
-    border-radius: 40px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #fff;
-    margin: 0 2rem;
-    transition: all 0.5s;
-    &:hover {
-      background-color: $colorAccentHover;
+    border: 2px solid orange;
+    .hero__intro {
+      flex-grow: 1;
+      @include flexColSA;
+      border: 2px solid violet;
+      .hero__title {
+        font-family: $fontSecondary;
+        font-size: 3rem;
+        padding: 2rem 0 1rem 0;
+        // Mobile
+        @include mobile {
+          font-size: 2rem;
+        }
+      }
+      .hero__text {
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem 2rem;
+      }
+      .hero__link {
+        @include flexCC;
+        width: 440px;
+        padding: 1.3rem;
+        background-color: $colorAccent;
+        box-shadow: 5px 10px 14px $colorAccentShadow;
+        border-radius: 40px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #fff;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $colorAccentHover;
+        }
+        //Mobile
+        @include mobile {
+          width: 80%;
+        }
+      }
+    }
+    .hero__photo {
+      width: 100%;
+      height: 60%;
+      .hero__photo-img {
+        border: 2px solid red;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
-
-.hero__photo-img {
-  border: 2px solid red;
-  // display: flex;
-  width: 100%;
-  // objecte-fit?
-}
-
-// dla mobile jeszcze obciąć zdjęcie będzie trzeba
-//od tableta przycinać zdjecie, zmianic czniksoni na mniejsze i ostatecznie button na max 310px
