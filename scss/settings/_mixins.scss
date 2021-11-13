@@ -50,3 +50,10 @@
   justify-content: space-around;
   align-items: center;
 }
+
+@mixin flexColFSC {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

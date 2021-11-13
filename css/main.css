@@ -195,7 +195,8 @@ table {
 }
 .row [class*=col-] {
   min-height: 1px;
-  border: 2px solid green;
+  border: 4px solid green;
+  background-color: #ecbaec;
 }
 @media (max-width: 792px) {
   .row [class*=col-] {
@@ -376,7 +377,6 @@ a {
 }
 
 .benefits {
-  border: 1px solid green;
   width: 100%;
   padding: 100px 0;
   background-color: #f7f7f7;
@@ -386,10 +386,14 @@ a {
     padding: 50px 0;
   }
 }
+.benefits .container {
+  border: 1px solid blue;
+}
 .benefits .container .benefit {
   min-height: 370px;
   max-width: 1124px;
   margin: 0 auto;
+  border: 3px solid green;
   background-color: white;
   border: 1px solid #e8e9ed;
   border-radius: 5px;
@@ -420,6 +424,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
+  border: 1px solid red;
 }
 .benefit__content.bottom {
   border: 1px solid #e8e9ed;
@@ -461,6 +466,7 @@ a {
 }
 
 .benefit__graphic {
+  border: 1px solid violet;
   flex-basis: 50%;
   position: relative;
   padding: 40px;
@@ -512,5 +518,135 @@ a {
   background-color: #55dfb4;
   border-radius: 5px;
   top: 0%;
+}
+
+.price {
+  border: 1px solid blue;
+}
+.price .col-4 {
+  padding: 1rem;
+}
+
+.price__title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.price__row {
+  max-width: 1266px;
+  margin: 0 auto;
+  align-items: center;
+}
+.price__row .price__column {
+  border-radius: 18px;
+  width: 100%;
+  height: 461px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.price__row .price__column .package {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+.price__row .price__column .pricing {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.price__row .price__column .offer {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+}
+.price__row .price__column .mb,
+.price__row .price__column .subdomain,
+.price__row .price__column .emails,
+.price__row .price__column .license,
+.price__row .price__column .support {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+.price__row .price__column .mb::before,
+.price__row .price__column .subdomain::before,
+.price__row .price__column .emails::before,
+.price__row .price__column .license::before,
+.price__row .price__column .support::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url(../assets/checkmark-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 2px;
+  left: -15px;
+}
+.price__row .price__column .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: white;
+  position: absolute;
+  top: 433px;
+}
+
+/* Price - basic */
+.basic.price__column {
+  border: 1px solid #fb3b64;
+}
+.basic .package {
+  margin-bottom: 26px;
+}
+.basic .pricing {
+  color: #fb3b64;
+}
+.basic .license::before {
+  background-image: url(../assets/close.svg);
+}
+.basic .support::before {
+  background-image: url(../assets/close.svg);
+}
+.basic .button {
+  background-color: #fb3b64;
+}
+
+/*  Price - professional */
+.professional.price__column {
+  height: 500px;
+  box-shadow: 5px 10px 27px var(--color-primary-shadow);
+  border: 1px solid #08a6e4;
+}
+.professional .pricing {
+  color: #08a6e4;
+}
+.professional .support::before {
+  background-image: url(../assets/close.svg);
+}
+.professional .button {
+  background-color: #08a6e4;
+  box-shadow: 5px 10px 14px var(--color-primary-shadow);
+  top: 473px;
+}
+
+/* Price - premium */
+.premium.price__column {
+  border: 1px solid #55dfb4;
+}
+.premium .pricing.premium {
+  color: #55dfb4;
+}
+.premium .button.premium {
+  background-color: #55dfb4;
 }
 /*# sourceMappingURL=main.css.map */
