@@ -1,50 +1,57 @@
-.stat__column {
-  padding: 25px 0;
-  .stat__icon {
-    position: relative;
-    .stat__bg {
-      width: 63px;
-      height: 63px;
-      border-radius: 50%;
+.section__row {
+  max-width: 1132px;
+  margin: 0 auto;
+  .stat__column {
+    padding: 30px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .stat__icon {
       position: relative;
-      &.left {
-        background-color: $colorGraphic1;
+      .stat__bg {
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        position: relative;
+        &.left {
+          background-color: $colorGraphic1;
+        }
+        &.middle {
+          background-color: $colorAccent;
+        }
+        &.right {
+          background-color: $colorGraphic2;
+        }
       }
-      &.middle {
-        background-color: $colorAccent;
-      }
-      &.right {
-        background-color: $colorGraphic2;
+      .stat__svg {
+        position: absolute;
+        &.left {
+          top: 8%;
+          left: 50%;
+        }
+        &.middle {
+          top: 23%;
+          left: 29%;
+        }
+        &.right {
+          top: 10%;
+          left: 48%;
+        }
       }
     }
-    .stat__svg {
-      position: absolute;
-      &.left {
-        top: 8%;
-        left: 50%;
-      }
-      &.middle {
-        top: 23%;
-        left: 29%;
-      }
-      &.right {
-        top: 10%;
-        left: 48%;
-      }
+    .stat__number {
+      font-family: $fontSecondary;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
     }
-  }
-  .stat__number {
-    font-family: $fontSecondary;
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-  }
-  .stat__text {
-    width: 130px;
-    font-family: $fontSecondary;
-    font-size: 1rem;
-    color: $colorFontSecondary;
-    text-align: center;
+    .stat__text {
+      width: 130px;
+      font-family: $fontSecondary;
+      font-size: 1rem;
+      color: $colorFontSecondary;
+      text-align: center;
+    }
   }
 }

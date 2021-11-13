@@ -1,0 +1,143 @@
+// Desktop
+.benefits {
+  border: 1px solid green;
+  width: 100%;
+  padding: 100px 0;
+  background-color: $colorBgSecondary;
+  // Tablet
+  @include tablet {
+    padding: 50px 0;
+  }
+  .container {
+    // border: 1px solid blue;
+    .benefit {
+      min-height: 370px;
+      max-width: 1124px;
+      margin: 0 auto;
+      // border: 3px solid green;
+      background-color: $colorBgPrimary;
+      border: 1px solid $colorBorderPrimary;
+      border-radius: 5px;
+      margin-bottom: 37px;
+      display: flex;
+      justify-content: space-between;
+      &.middle {
+        flex-direction: row-reverse;
+      }
+      &.bottom {
+        border: none;
+        background-color: $colorBgSecondary;
+      }
+      // Tablet
+      @include tablet {
+        flex-direction: column;
+        &.middle {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+.benefit__content {
+  flex-basis: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  // border: 1px solid red;
+  &.bottom {
+    border: 1px solid $colorBorderPrimary;
+    border-radius: 5px;
+    background-color: $colorBgPrimary;
+  }
+  .benefit__title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .benefit__text {
+    font-family: $fontPrimary;
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+    // Tablet
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+  .benefit__line {
+    width: 330px;
+    height: 4px;
+    &.top {
+      background-color: $colorGraphic1;
+    }
+    &.middle {
+      background-color: $colorAccent;
+    }
+    &.bottom {
+      background-color: $colorGraphic2;
+    }
+    // Tablet
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+// Desktop
+.benefit__graphic {
+  // border: 1px solid violet;
+  flex-basis: 50%;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &.bottom {
+    flex-basis: 40%;
+  }
+  .benefit__img {
+    z-index: 1;
+    &.top {
+      width: 80%;
+      height: auto;
+    }
+    &.middle {
+      width: 80%;
+      height: auto;
+    }
+    &.bottom {
+      width: 70%;
+      height: auto;
+    }
+  }
+  .benefit__shape {
+    position: absolute;
+    &.top {
+      width: 40%;
+      height: 55%;
+      background-color: $colorGraphic1;
+      border-radius: 50px;
+      top: 20%;
+      left: 47%;
+      transform: rotate(45deg);
+    }
+    &.middle {
+      width: 60%;
+      height: 90%;
+      background-color: $colorAccent;
+      border-radius: 50%;
+      top: 5%;
+      left: 13%;
+    }
+    &.bottom {
+      height: 100%;
+      width: 100%;
+      background-color: $colorGraphic2;
+      border-radius: 5px;
+      top: 0%;
+    }
+  }
+}
