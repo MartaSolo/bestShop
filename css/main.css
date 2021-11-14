@@ -502,6 +502,11 @@ a {
   left: 47%;
   transform: rotate(45deg);
 }
+@media (max-width: 1024px) {
+  .benefit__graphic .benefit__shape.top {
+    top: 7%;
+  }
+}
 .benefit__graphic .benefit__shape.middle {
   width: 60%;
   height: 90%;
@@ -521,6 +526,11 @@ a {
 .price {
   border: 1px solid blue;
 }
+@media (max-width: 1024px) {
+  .price {
+    padding: 30px 0;
+  }
+}
 
 .price__title {
   margin-bottom: 60px;
@@ -535,6 +545,14 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .price__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .price__row .price__column {
   border-radius: 18px;
   flex-basis: 30%;
@@ -544,39 +562,66 @@ a {
   justify-content: flex-start;
   align-items: center;
 }
-.price__row .price__column .package {
+@media (max-width: 1024px) {
+  .price__row .price__column {
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.price__row .price__column .column__general {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.price__row .price__column .column__general .package {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
   margin: 1.5rem 0;
 }
-.price__row .price__column .pricing {
+.price__row .price__column .column__general .pricing {
   font-weight: 300;
   font-size: 2.5rem;
   padding-bottom: 15px;
 }
-.price__row .price__column .offer {
+.price__row .price__column .column__general .offer {
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
   margin-bottom: 50px;
 }
-.price__row .price__column .mb,
-.price__row .price__column .subdomain,
-.price__row .price__column .emails,
-.price__row .price__column .license,
-.price__row .price__column .support {
+.price__row .price__column .column__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.price__row .price__column .column__details .mb,
+.price__row .price__column .column__details .subdomain,
+.price__row .price__column .column__details .emails,
+.price__row .price__column .column__details .license,
+.price__row .price__column .column__details .support {
   font-size: 0.9rem;
   padding-bottom: 20px;
   position: relative;
 }
-.price__row .price__column .support {
+.price__row .price__column .column__details .support {
   padding-bottom: 60px;
 }
-.price__row .price__column .mb::before,
-.price__row .price__column .subdomain::before,
-.price__row .price__column .emails::before,
-.price__row .price__column .license::before,
-.price__row .price__column .support::before {
+@media (max-width: 1024px) {
+  .price__row .price__column .column__details .support {
+    padding-bottom: 0;
+  }
+}
+.price__row .price__column .column__details .mb::before,
+.price__row .price__column .column__details .subdomain::before,
+.price__row .price__column .column__details .emails::before,
+.price__row .price__column .column__details .license::before,
+.price__row .price__column .column__details .support::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -600,11 +645,16 @@ a {
   position: absolute;
   top: 94%;
 }
+@media (max-width: 1024px) {
+  .price__row .price__column .button {
+    top: 89%;
+  }
+}
 
 .basic.price__column {
   border: 1px solid #fb3b64;
 }
-.basic.price__column .pricing {
+.basic.price__column .col .pricing {
   color: #fb3b64;
   padding-bottom: 30px;
 }
@@ -623,6 +673,11 @@ a {
   flex-basis: 33%;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
   border: 1px solid #08a6e4;
+}
+@media (max-width: 1024px) {
+  .professional.price__column {
+    width: 100%;
+  }
 }
 .professional.price__column .package {
   padding: 26px 0;

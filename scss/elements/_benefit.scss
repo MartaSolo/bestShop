@@ -123,6 +123,9 @@
       top: 20%;
       left: 47%;
       transform: rotate(45deg);
+      @include tablet {
+        top: 7%;
+      }
     }
     &.middle {
       width: 60%;

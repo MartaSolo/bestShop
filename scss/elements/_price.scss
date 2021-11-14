@@ -1,5 +1,9 @@
 .price {
   border: 1px solid blue;
+  //Tablet
+  @include tablet {
+    padding: 30px 0;
+  }
 }
 
 .price__title {
@@ -12,61 +16,75 @@
   max-width: 1266px;
   margin: 0 auto;
   @include flexRSBC;
-  // Tablet
-  // @include tablet {
-  //   @include flexColFSC;
-  // }
+  //Tablet
+  @include tablet {
+    @include flexColFSC;
+  }
   .price__column {
     border-radius: 18px;
     flex-basis: 30%;
     position: relative;
     @include flexColFSC;
     //Tablet
-    // @include tablet {
-    //   width: 90%;
-    // }
-    .package {
-      font-family: $fontSecondary;
-      font-weight: bold;
-      font-size: 1.25rem;
-      margin: 1.5rem 0;
+    @include tablet {
+      padding: 10px;
+      width: 90%;
+      margin-bottom: 40px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
     }
-    .pricing {
-      font-weight: 300;
-      font-size: 2.5rem;
-      padding-bottom: 15px;
+    .column__general {
+      @include flexColFSC;
+      .package {
+        font-family: $fontSecondary;
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin: 1.5rem 0;
+      }
+      .pricing {
+        font-weight: 300;
+        font-size: 2.5rem;
+        padding-bottom: 15px;
+      }
+      .offer {
+        font-family: $fontSecondary;
+        font-size: 0.9rem;
+        margin-bottom: 50px;
+      }
     }
-    .offer {
-      font-family: $fontSecondary;
-      font-size: 0.9rem;
-      margin-bottom: 50px;
-    }
-    .mb,
-    .subdomain,
-    .emails,
-    .license,
-    .support {
-      font-size: 0.9rem;
-      padding-bottom: 20px;
-      position: relative;
-    }
-    .support {
-      padding-bottom: 60px;
-    }
-    .mb::before,
-    .subdomain::before,
-    .emails::before,
-    .license::before,
-    .support::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      background-image: url(../assets/checkmark-1.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      top: 2px;
-      left: -15px;
+    .column__details {
+      @include flexColFSC;
+      .mb,
+      .subdomain,
+      .emails,
+      .license,
+      .support {
+        font-size: 0.9rem;
+        padding-bottom: 20px;
+        position: relative;
+      }
+      .support {
+        padding-bottom: 60px;
+        @include tablet {
+          padding-bottom: 0;
+        }
+      }
+      .mb::before,
+      .subdomain::before,
+      .emails::before,
+      .license::before,
+      .support::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-image: url(../assets/checkmark-1.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 2px;
+        left: -15px;
+      }
     }
     .button {
       width: 150px;
@@ -78,6 +96,9 @@
       color: $colorBgPrimary;
       position: absolute;
       top: 94%;
+      @include tablet {
+        top: 89%;
+      }
     }
   }
 }
@@ -87,7 +108,7 @@
 .basic {
   &.price__column {
     border: 1px solid $colorGraphic1;
-    .pricing {
+    .col .pricing {
       color: $colorGraphic1;
       padding-bottom: 30px;
     }
@@ -113,6 +134,9 @@
     flex-basis: 33%;
     box-shadow: 5px 10px 27px $colorAccentShadow;
     border: 1px solid $colorAccent;
+    @include tablet {
+      width: 100%;
+    }
     .package {
       padding: 26px 0;
     }
