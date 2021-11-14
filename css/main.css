@@ -133,12 +133,6 @@ table {
   border-spacing: 0;
 }
 
-:root {
-  --color-light-grey: rgba(232, 233, 237, 1);
-  --color-consent: rgba(112, 112, 112, 1);
-  --color-input: rgba(149, 152, 154, 1);
-}
-
 .col-1 {
   width: 8.3333333333%;
 }
@@ -195,6 +189,8 @@ table {
 }
 .row [class*=col-] {
   min-height: 1px;
+  border: 4px solid green;
+  background-color: #ecdcec;
 }
 @media (max-width: 792px) {
   .row [class*=col-] {
@@ -242,6 +238,7 @@ a {
   margin-bottom: 50px;
   text-align: center;
 }
+
 .header {
   border: 2px solid green;
   height: 70px;
@@ -702,5 +699,164 @@ a {
 }
 .premium.price__column .button.premium {
   background-color: #55dfb4;
+}
+
+/* Contact */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 30px 0;
+  }
+}
+.contact .contact__row {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.contact__column {
+  flex-basis: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contact__column .contact__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 22px;
+}
+@media (max-width: 1024px) {
+  .contact__column .contact__title {
+    font-size: 2.2rem;
+  }
+}
+.contact__column .contact__text {
+  font-size: 1rem;
+  margin-bottom: 42px;
+}
+.contact__column .contact__ways {
+  border: 1px solid orangered;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .contact__column .contact__ways {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+  }
+}
+.contact__column .contact__ways .contact__email-address,
+.contact__column .contact__ways .contact__phone {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #a5a5a5;
+  margin: 10px 10px 10px 40px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .contact__column .contact__ways .contact__email-address,
+.contact__column .contact__ways .contact__phone {
+    margin-left: 10px;
+  }
+}
+.contact__column .contact__ways .contact__email-address::before {
+  content: "";
+  background-image: url(../assets/mail-icon.svg);
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: -33%;
+  left: -21%;
+}
+.contact__column .contact__ways .contact__phone::before {
+  content: "";
+  background-image: url(../assets/phone-icon.svg);
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: -35%;
+  left: -33%;
+}
+
+.contact__form .contact__name,
+.contact__form .contact__email {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form .contact__name-label,
+.contact__form .contact__email-label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #08a6e4;
+  margin-top: 5px;
+}
+.contact__form .contact__name-input,
+.contact__form .contact__email-input {
+  border: none;
+  border-bottom: 1px solid #95989a;
+  margin-bottom: 30px;
+}
+@media (max-width: 1024px) {
+  .contact__form .contact__name-input,
+.contact__form .contact__email-input {
+    margin-bottom: 20px;
+  }
+}
+.contact__form .contact__name-input:focus,
+.contact__form .contact__email-input:focus {
+  border-bottom: 2px solid black;
+  outline: none;
+}
+.contact__form .contact__consent .contact__consent-label {
+  display: flex;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: #707070;
+  margin-bottom: 20px;
+}
+.contact__form .contact__consent .contact__consent-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.contact__form .contact__consent .contact__consent-span {
+  flex-basis: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid #95989a;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+.contact__form .contact__consent .contact__consent-checkbox:checked + .contact__consent-span {
+  background-image: url(../assets/checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 6rem;
+  border-radius: 35px;
+  border: none;
+  background-color: #08a6e4;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+.contact__button .contact__button:hover {
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+}
+@media (max-width: 1024px) {
+  .contact__button {
+    align-self: flex-end;
+  }
 }
 /*# sourceMappingURL=main.css.map */

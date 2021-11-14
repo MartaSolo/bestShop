@@ -1,0 +1,150 @@
+/* Contact */
+
+.contact {
+  // Tablet
+  @include tablet {
+    padding: 30px 0;
+  }
+  .contact__row {
+    max-width: 896px;
+    margin: 0 auto;
+  }
+}
+
+.contact__column {
+  flex-basis: 50%;
+  padding: 20px;
+  @include flexColFSFS;
+  .contact__title {
+    font-family: $fontSecondary;
+    font-size: 3rem;
+    margin-bottom: 22px;
+    @include tablet {
+      font-size: 2.2rem;
+    }
+  }
+  .contact__text {
+    font-size: 1rem;
+    margin-bottom: 42px;
+  }
+  .contact__ways {
+    border: 1px solid orangered;
+    @include flexRSBC;
+    //Tablet
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 25px;
+    }
+    .contact__email-address,
+    .contact__phone {
+      font-weight: 700;
+      font-size: 1rem;
+      color: $colorFontSecondary;
+      margin: 10px 10px 10px 40px;
+      position: relative;
+      @include tablet {
+        margin-left: 10px;
+      }
+    }
+    .contact__email-address::before {
+      content: "";
+      background-image: url(../assets/mail-icon.svg);
+      width: 27px;
+      height: 27px;
+      position: absolute;
+      top: -33%;
+      left: -21%;
+    }
+    .contact__phone::before {
+      content: "";
+      background-image: url(../assets/phone-icon.svg);
+      width: 27px;
+      height: 27px;
+      position: absolute;
+      top: -35%;
+      left: -33%;
+    }
+  }
+}
+
+// Form
+.contact__form {
+  .contact__name,
+  .contact__email {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__name-label,
+  .contact__email-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $colorAccent;
+    margin-top: 5px;
+  }
+  .contact__name-input,
+  .contact__email-input {
+    border: none;
+    border-bottom: 1px solid $colorInput;
+    margin-bottom: 30px;
+    // Tablet
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  .contact__name-input:focus,
+  .contact__email-input:focus {
+    border-bottom: 2px solid black;
+    outline: none;
+  }
+  .contact__consent {
+    .contact__consent-label {
+      display: flex;
+      cursor: pointer;
+      font-size: 0.75rem;
+      color: $colorCheckbox;
+      margin-bottom: 20px;
+    }
+    .contact__consent-checkbox {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .contact__consent-span {
+      flex-basis: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      cursor: pointer;
+      border: 1px solid $colorInput;
+      border-radius: 4px;
+      margin-right: 15px;
+    }
+    .contact__consent-checkbox:checked + .contact__consent-span {
+      background-image: url(../assets/checkmark.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+//Button
+.contact__button {
+  @include flexRCC;
+  padding: 1.2rem 6rem;
+  border-radius: 35px;
+  border: none;
+  background-color: $colorAccent;
+  font-size: 0.8rem;
+  color: $colorBgPrimary;
+  cursor: pointer;
+  .contact__button:hover {
+    box-shadow: 5px 10px 14px $colorAccentShadow;
+  }
+  // Tablet
+  @include tablet {
+    align-self: flex-end;
+  }
+}
