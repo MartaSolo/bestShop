@@ -561,7 +561,7 @@ a {
 }
 @media (max-width: 1024px) {
   .price__row .price__column {
-    padding: 10px;
+    padding: 20px 10px;
     width: 90%;
     margin-bottom: 40px;
     flex-direction: row;
@@ -858,5 +858,45 @@ a {
   .contact__button {
     align-self: flex-end;
   }
+}
+
+.footer {
+  height: 89px;
+  background-color: #f7f7f7;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.16);
+}
+.footer .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+}
+.footer__text .footer__logo {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  color: #08a6e4;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+.footer__text .footer__copy {
+  font-size: 0.7rem;
+  color: #a5a5a5;
+}
+
+.footer__icons {
+  display: flex;
+  align-items: center;
+}
+.footer__icons .footer__icons--tw,
+.footer__icons .footer__icons--fb {
+  width: 24px;
+  height: 24px;
+  margin: 10px;
 }
 /*# sourceMappingURL=main.css.map */
