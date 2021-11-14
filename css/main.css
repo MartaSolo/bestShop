@@ -195,8 +195,6 @@ table {
 }
 .row [class*=col-] {
   min-height: 1px;
-  border: 4px solid green;
-  background-color: #ecbaec;
 }
 @media (max-width: 792px) {
   .row [class*=col-] {
@@ -523,9 +521,6 @@ a {
 .price {
   border: 1px solid blue;
 }
-.price .col-4 {
-  padding: 1rem;
-}
 
 .price__title {
   margin-bottom: 60px;
@@ -533,14 +528,16 @@ a {
 }
 
 .price__row {
+  border: 1px solid paleturquoise;
   max-width: 1266px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .price__row .price__column {
   border-radius: 18px;
-  width: 100%;
-  height: 461px;
+  flex-basis: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -551,12 +548,12 @@ a {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
-  margin-bottom: 14px;
+  margin: 1.5rem 0;
 }
 .price__row .price__column .pricing {
   font-weight: 300;
   font-size: 2.5rem;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 .price__row .price__column .offer {
   font-family: "Raleway", sans-serif;
@@ -569,8 +566,11 @@ a {
 .price__row .price__column .license,
 .price__row .price__column .support {
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   position: relative;
+}
+.price__row .price__column .support {
+  padding-bottom: 60px;
 }
 .price__row .price__column .mb::before,
 .price__row .price__column .subdomain::before,
@@ -598,55 +598,54 @@ a {
   font-size: 0.8rem;
   color: white;
   position: absolute;
-  top: 433px;
+  top: 94%;
 }
 
-/* Price - basic */
 .basic.price__column {
   border: 1px solid #fb3b64;
 }
-.basic .package {
-  margin-bottom: 26px;
-}
-.basic .pricing {
+.basic.price__column .pricing {
   color: #fb3b64;
+  padding-bottom: 30px;
 }
-.basic .license::before {
+.basic.price__column .license::before {
   background-image: url(../assets/close.svg);
 }
-.basic .support::before {
+.basic.price__column .support::before {
   background-image: url(../assets/close.svg);
 }
-.basic .button {
+.basic.price__column .button {
   background-color: #fb3b64;
 }
 
 /*  Price - professional */
 .professional.price__column {
-  height: 500px;
-  box-shadow: 5px 10px 27px var(--color-primary-shadow);
+  flex-basis: 33%;
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
   border: 1px solid #08a6e4;
 }
-.professional .pricing {
+.professional.price__column .package {
+  padding: 26px 0;
+}
+.professional.price__column .pricing {
   color: #08a6e4;
 }
-.professional .support::before {
+.professional.price__column .support::before {
   background-image: url(../assets/close.svg);
 }
-.professional .button {
+.professional.price__column .button {
   background-color: #08a6e4;
-  box-shadow: 5px 10px 14px var(--color-primary-shadow);
-  top: 473px;
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
 }
 
 /* Price - premium */
 .premium.price__column {
   border: 1px solid #55dfb4;
 }
-.premium .pricing.premium {
+.premium.price__column .pricing.premium {
   color: #55dfb4;
 }
-.premium .button.premium {
+.premium.price__column .button.premium {
   background-color: #55dfb4;
 }
 /*# sourceMappingURL=main.css.map */

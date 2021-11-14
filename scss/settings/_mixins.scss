@@ -37,6 +37,12 @@
   align-items: center;
 }
 
+@mixin flexRSBC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin flexColSBC {
   display: flex;
   flex-direction: column;

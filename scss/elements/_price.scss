@@ -1,9 +1,5 @@
 .price {
   border: 1px solid blue;
-  .col-4 {
-    // margin: 0.5rem;
-    padding: 1rem;
-  }
 }
 
 .price__title {
@@ -12,25 +8,33 @@
 }
 
 .price__row {
+  border: 1px solid paleturquoise;
   max-width: 1266px;
   margin: 0 auto;
-  align-items: center;
+  @include flexRSBC;
+  // Tablet
+  // @include tablet {
+  //   @include flexColFSC;
+  // }
   .price__column {
     border-radius: 18px;
-    width: 100%;
-    height: 461px;
+    flex-basis: 30%;
     position: relative;
     @include flexColFSC;
+    //Tablet
+    // @include tablet {
+    //   width: 90%;
+    // }
     .package {
       font-family: $fontSecondary;
       font-weight: bold;
       font-size: 1.25rem;
-      margin-bottom: 14px;
+      margin: 1.5rem 0;
     }
     .pricing {
       font-weight: 300;
       font-size: 2.5rem;
-      margin-bottom: 15px;
+      padding-bottom: 15px;
     }
     .offer {
       font-family: $fontSecondary;
@@ -43,8 +47,11 @@
     .license,
     .support {
       font-size: 0.9rem;
-      margin-bottom: 20px;
+      padding-bottom: 20px;
       position: relative;
+    }
+    .support {
+      padding-bottom: 60px;
     }
     .mb::before,
     .subdomain::before,
@@ -66,72 +73,61 @@
       height: 50px;
       border-radius: 23px;
       border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexRCC;
       font-size: 0.8rem;
       color: $colorBgPrimary;
       position: absolute;
-      top: 433px;
+      top: 94%;
     }
   }
 }
 
-/* Price - basic */
+// /* Price - basic */
 
 .basic {
   &.price__column {
     border: 1px solid $colorGraphic1;
-  }
-  .package {
-    margin-bottom: 26px;
-  }
-  .pricing {
-    color: $colorGraphic1;
-  }
-  .license {
-    &::before {
-      background-image: url(../assets/close.svg);
+    .pricing {
+      color: $colorGraphic1;
+      padding-bottom: 30px;
     }
-  }
-  .support {
-    &::before {
-      background-image: url(../assets/close.svg);
+    .license {
+      &::before {
+        background-image: url(../assets/close.svg);
+      }
     }
-  }
-  .button {
-    background-color: $colorGraphic1;
+    .support {
+      &::before {
+        background-image: url(../assets/close.svg);
+      }
+    }
+    .button {
+      background-color: $colorGraphic1;
+    }
   }
 }
 
 /*  Price - professional */
 .professional {
   &.price__column {
-    width: 11%
-    height: 500px;
-    box-shadow: 5px 10px 27px var(--color-primary-shadow);
+    flex-basis: 33%;
+    box-shadow: 5px 10px 27px $colorAccentShadow;
     border: 1px solid $colorAccent;
-  }
-  .package {
-    // margin-bottom: 26px;
-  }
-  .pricing {
-    color: $colorAccent;
-  }
-  .license {
-    // &::before {
-    //   background-image: url(../assets/close.svg);
-    // }
-  }
-  .support {
-    &::before {
-      background-image: url(../assets/close.svg);
+    .package {
+      padding: 26px 0;
     }
-  }
-  .button {
-    background-color: $colorAccent;
-    box-shadow: 5px 10px 14px var(--color-primary-shadow);
-    top: 473px;
+    .pricing {
+      color: $colorAccent;
+    }
+    .support {
+      &::before {
+        background-image: url(../assets/close.svg);
+      }
+    }
+    .button {
+      background-color: $colorAccent;
+      box-shadow: 5px 10px 27px $colorAccentShadow;
+    }
   }
 }
 
@@ -139,11 +135,11 @@
 .premium {
   &.price__column {
     border: 1px solid $colorGraphic2;
-  }
-  .pricing.premium {
-    color: $colorGraphic2;
-  }
-  .button.premium {
-    background-color: $colorGraphic2;
+    .pricing.premium {
+      color: $colorGraphic2;
+    }
+    .button.premium {
+      background-color: $colorGraphic2;
+    }
   }
 }
