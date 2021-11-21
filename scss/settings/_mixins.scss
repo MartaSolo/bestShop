@@ -17,19 +17,6 @@
   }
 }
 
-// Media queries:
-// @mixin tablet {
-//   @media (min-width: 786px) {
-//     @content;
-//   }
-// }
-
-// @mixin desktop {
-//   @media (min-width: 1024px) {
-//     @content;
-//   }
-// }
-
 // Flex mixins
 @mixin flexRCC {
   display: flex;
