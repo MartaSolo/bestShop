@@ -1,6 +1,5 @@
 // Desktop
 .benefits {
-  // border: 1px solid green;             //* to delete
   width: 100%;
   padding: 100px 0;
   background-color: $colorBgSecondary;
@@ -9,12 +8,10 @@
     padding: 50px 0;
   }
   .container {
-    border: 1px solid blue;
     .benefit {
-      min-height: 370px; //* bylo sztywne height i blokowało rozicagnanie, zawsze min-height
+      min-height: 370px;
       max-width: 1124px;
       margin: 0 auto;
-      border: 3px solid green; //* to delete
       background-color: $colorBgPrimary;
       border: 1px solid $colorBorderPrimary;
       border-radius: 5px;
@@ -47,7 +44,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  border: 1px solid red; //* to delete
   &.bottom {
     border: 1px solid $colorBorderPrimary;
     border-radius: 5px;
@@ -88,7 +84,6 @@
 
 // Desktop
 .benefit__graphic {
-  border: 1px solid violet; //* to delete
   flex-basis: 50%;
   position: relative;
   padding: 40px;

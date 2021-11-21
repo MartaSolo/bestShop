@@ -1,15 +1,12 @@
 //Desktop
 .hero {
   height: calc(100vh - 70px);
-  // border: 2px solid blue;  //*do usuniecia
   .container {
     height: 100%;
     @include flexColSBC;
-    // border: 2px solid orange; //*do usuniecia
     .hero__intro {
       flex-grow: 1;
       @include flexColSAC;
-      // border: 2px solid violet; //*do usunięcia
       .hero__title {
         font-family: $fontSecondary;
         font-size: 3rem;
@@ -48,7 +45,6 @@
       width: 100%;
       height: 60%;
       .hero__photo-img {
-        border: 2px solid red;
         object-fit: cover;
         width: 100%;
         height: 100%;

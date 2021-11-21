@@ -1,5 +1,4 @@
 .price {
-  border: 1px solid blue;
   //Tablet
   @include tablet {
     padding: 30px 0;
@@ -12,7 +11,6 @@
 }
 
 .price__row {
-  border: 1px solid paleturquoise;
   max-width: 1266px;
   margin: 0 auto;
   @include flexRSBC;
@@ -108,18 +106,22 @@
 .basic {
   &.price__column {
     border: 1px solid $colorGraphic1;
-    .col .pricing {
-      color: $colorGraphic1;
-      padding-bottom: 30px;
-    }
-    .license {
-      &::before {
-        background-image: url(../assets/close.svg);
+    .column__general {
+      .col .pricing {
+        color: $colorGraphic1;
+        padding-bottom: 30px;
       }
     }
-    .support {
-      &::before {
-        background-image: url(../assets/close.svg);
+    .column__details {
+      .license {
+        &::before {
+          background-image: url(../assets/close.svg);
+        }
+      }
+      .support {
+        &::before {
+          background-image: url(../assets/close.svg);
+        }
       }
     }
     .button {
@@ -143,9 +145,11 @@
     .pricing {
       color: $colorAccent;
     }
-    .support {
-      &::before {
-        background-image: url(../assets/close.svg);
+    .column__details {
+      .support {
+        &::before {
+          background-image: url(../assets/close.svg);
+        }
       }
     }
     .button {
