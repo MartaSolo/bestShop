@@ -997,7 +997,6 @@ nav .menu__toggle span:last-child {
 }
 .calc h2 {
   text-align: center;
-  font-size: 2rem;
 }
 .calc__columns {
   max-width: 865px;
@@ -1052,7 +1051,7 @@ nav .menu__toggle span:last-child {
 }
 .calc__select .select__input::after {
   content: "";
-  background-image: url("../assets/Arrow.svg");
+  background-image: url("../../assets/Arrow Down.svg");
   width: 22px;
   height: 22px;
   display: block;

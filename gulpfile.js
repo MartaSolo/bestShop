@@ -2,13 +2,11 @@
 
 const entryPath = ".";
 
-
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
-
 
 function compileSass(done) {
   gulp
@@ -27,6 +25,7 @@ function watcher(done) {
   });
   gulp.watch(entryPath + "/scss/**/*.scss", gulp.series(compileSass, reload));
   gulp.watch(entryPath + "/*.html", gulp.series(reload));
+  gulp.watch(entryPath + "/js/*.js", gulp.series(reload));
   done();
 }
 
