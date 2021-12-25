@@ -14,3 +14,7 @@ HMTL5, CSS3, JS, Sass, Gulp.
 https://bestshop-martasolo.netlify.app/
 
 ## Instalation:
+
+## Preview
+
+![Best Shop](https://github.com/MartaSolo/bestShop/blob/main/Best_Shop.gif)
