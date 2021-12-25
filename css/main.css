@@ -976,9 +976,10 @@ nav .menu__toggle span:last-child {
   font-size: 0.8rem;
   color: white;
   cursor: pointer;
+  transition: all 0.5s;
 }
-.contact__button .contact__button:hover {
-  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+.contact__button:hover {
+  background-color: #0b7fad;
 }
 @media (max-width: 1024px) {
   .contact__button {
@@ -1083,8 +1084,38 @@ nav .menu__toggle span:last-child {
 .calc__select.open .select__dropdown {
   display: block;
 }
+.calc .form__checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.calc .form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.calc .form__checkbox span {
+  flex-basis: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid #707070;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.calc .form__checkbox input:checked + span {
+  background-image: url(../assets/checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .calc .form__checkbox .consent__text {
-  padding-top: 4px;
+  font-size: 12px;
+  color: #707070;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 .calc__summary {
   width: 50%;

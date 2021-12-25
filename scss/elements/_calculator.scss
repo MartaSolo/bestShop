@@ -1,25 +1,3 @@
-// // do usunięcia
-// .calc {
-//   border: 1px solid blue;
-//   .calc__columns {
-//     border: 1px solid green;
-//     .calc__form {
-//       border: 1px solid orangered;
-//     }
-//     .calc__summary {
-//       border: 1px solid red;
-//       background-color: red;
-//       height: 200px;
-//       ul {
-//         border: 1px solid green;
-//       }
-//       .summary__total {
-//         border: 1px solid blue;
-//       }
-//     }
-//   }
-// }
-
 .calc {
   padding: 80px 0;
   background-color: $colorBgSecondary;
@@ -118,8 +96,36 @@
   }
 
   .form__checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    span {
+      flex-basis: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      cursor: pointer;
+      border: 1px solid $colorCheckbox;
+      background-color: $colorBgPrimary;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    input:checked + span {
+      background-image: url(../assets/checkmark.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     .consent__text {
-      padding-top: 4px;
+      font-size: 12px;
+      color: $colorCheckbox;
+      margin-left: 10px;
+      margin-bottom: 10px;
     }
   }
 
