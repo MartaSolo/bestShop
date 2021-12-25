@@ -15,6 +15,13 @@ https://bestshop-martasolo.netlify.app/
 
 ## Instalation:
 
+1. You have to have node.js installed.
+2. Download the project files.
+3. Open the console in the project folder.
+4. Type in the console: `npm install`.
+5. Type in the console: `gulp`.
+6. Open the project.
+
 ## Preview
 
 ![Best Shop](https://github.com/MartaSolo/bestShop/blob/main/Best_Shop.gif)
